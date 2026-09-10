@@ -595,3 +595,8 @@ p { margin: 0; }
   .gallery-grid { grid-template-columns: 1fr; }
   .model-row { grid-template-columns: 1fr; }
 }
+.brand img {
+  display: block;
+  width: 180px;
+  height: auto;
+}
