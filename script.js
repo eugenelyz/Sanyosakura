@@ -100,3 +100,18 @@ function initContactForm() {
     form.reset();
   });
 }
+
+document.querySelectorAll('.gallery-item video').forEach(video => {
+  video.addEventListener('play', async () => {
+    try {
+      if (video.requestFullscreen) {
+        await video.requestFullscreen();
+      } else if (video.webkitEnterFullscreen) {
+        video.webkitEnterFullscreen();
+      }
+    } catch (error) {
+      console.error('Could not enter fullscreen:', error);
+    }
+  });
+});
+
